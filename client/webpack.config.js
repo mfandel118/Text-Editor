@@ -8,7 +8,7 @@ const path = require("path");
 
 module.exports = () => {
 	return {
-		mode: "development",
+		mode: "production",
 		entry: {
 			main: "./src/js/index.js",
 			install: "./src/js/install.js",
@@ -24,7 +24,7 @@ module.exports = () => {
 			}),
 			new InjectManifest({
 				swSrc: "./src-sw.js",
-				swDest: "sw.js",
+				swDest: "src-sw.js",
 			}),
 			new WebpackPwaManifest({
 				fingerprints: false,
